@@ -1,0 +1,2 @@
+[deploy]
+start_command = "gunicorn tu_carpeta_django.wsgi:application --bind 0.0.0.0:$PORT"
