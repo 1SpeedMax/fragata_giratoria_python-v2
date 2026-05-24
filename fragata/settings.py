@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -91,16 +94,19 @@ WSGI_APPLICATION = 'fragata.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'fragata_db',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'NAME': os.getenv("BD_NAME"),
+        'USER': os.getenv("BD_USER"),
+        'PASSWORD': os.getenv("BD_PASSWORD"),
+        'HOST': os.getenv("BD_HOST"),
+        # El puerto se convierte a entero; si no encuentra la variable, usa 18805 por defecto
+        'PORT': int(os.getenv("BD_PORT", 18805)), 
         'OPTIONS': {
             'client_encoding': 'UTF8',
         },
     }
 }
+
+
 
 
 # Password validation

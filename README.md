@@ -188,3 +188,19 @@ Para sugerencias o mejoras, abre un *issue* en el repositorio.
 ---
 
 ✨ **La Fragata Giratoria – Tecnología al servicio del buen sabor** ✨
+
+
+Credenciales: 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'nXwyIGNXNFyDMrGQkWiiAhKUZVWRcqyF',
+        'HOST': 'zephyr.proxy.rlwy.net:',
+        'PORT': '18805',
+        'OPTIONS': {
+            'client_encoding': 'UTF8',
+        },
+    }
+}
