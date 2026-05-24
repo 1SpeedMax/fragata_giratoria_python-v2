@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🍽️ La Fragata Giratoria
 
 **Sistema POS y Gestión de Ventas para Restaurante**
@@ -204,3 +205,6 @@ DATABASES = {
         },
     }
 }
+=======
+# fragata_giratoria_python-v2
+>>>>>>> e263ac58f5caf7eb6a31c8e087e118ad04ddefa0
